@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Open+Sans&display=swap');
+
+:root {
+  --fontSize: 16px;
+  --primaryColor: #e34c0f;
+  --textColor: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--textColor);
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--fontSize);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+  text-shadow: 1px 1px 2px #000 !important;
+}
+
+a:hover {
+  text-shadow: 2px 2px 2px #000;
+  font-weight: bold;
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(90deg, #e3810f 0%, #e3170f 100%);
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  justify-content: center;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+#player {
+  background: linear-gradient(90deg, #291c08 0%, #290c08 100%);
+  bottom: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+}
+
+#player #buttons {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#player svg:hover {
+  cursor: pointer;
+}
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+#title > *:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+#title span {
+  font-family: 'Jersey 15', sans-serif;
+  font-size: calc(var(--fontSize) * 4);
+}
+
+#title span:nth-child(2) {
+  background-color: var(--textColor);
+  color: var(--primaryColor);
+  margin-left: -2px;
+}

@@ -1,0 +1,46 @@
+version: '2.1'
+
+services:
+  start-watch:
+    image: radio
+    build: .
+    environment:
+      PORT: 3000
+    command:
+      - yarn
+      - start-watch
+    volumes:
+      - .:/radio
+      - node_modules:/radio/node_modules
+    ports:
+      - 3000:3000
+  test:
+    image: radio
+    build: .
+    command:
+      - yarn
+      - test
+    volumes:
+      - .:/radio
+      - node_modules:/radio/node_modules
+  test-coverage:
+    image: radio
+    build: .
+    command:
+      - yarn
+      - test-coverage
+    volumes:
+      - .:/radio
+      - node_modules:/radio/node_modules
+  test-e2e:
+    image: radio
+    build: .
+    command:
+      - yarn
+      - test-e2e
+    volumes:
+      - .:/radio
+      - node_modules:/radio/node_modules
+
+volumes:
+  node_modules: {}
